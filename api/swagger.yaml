@@ -1,0 +1,45 @@
+swagger: '2.0'
+info:
+  description: French News API
+  version: 1.0.0
+  title: Surinews
+  termsOfService: ''
+  contact:
+    email: nicolas.gorrity@gmail.com
+  license:
+    name: ISC
+    url: 'https://www.gnu.org/licenses/license-list.html#ISC'
+host: address.server.fr
+basePath: /
+tags:
+  - name: getnews
+    description: >-
+      Get the French news of today
+schemes:
+  - https
+paths:
+  /getnews:
+    get:
+      tags:
+        - getnews
+      summary: >-
+        Get the fresh national French news 
+      description: ''
+      operationId: getnews
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Ok
+          schema:
+            $ref: '#/definitions/OutputMessages'
+        '400':
+          description: Bad request
+        '503':
+          description: Service unavailable
+      x-swagger-router-controller: Getnews
+definitions:
+  OutputMessages:
+    properties:
+      message:
+        type: string
