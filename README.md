@@ -1,4 +1,4 @@
-# Weather API for Surirobot
+# News API for Surirobot
 
 ## Overview
 This API uses Google News (France) to retrieve current fresh news. It will return the synopsis of a random article among the 10 important articles that Google provides.
